@@ -1,0 +1,147 @@
+.checkform_item{}
+.dchkrd{}
+.dchkrd:checked{}
+.dchkrd_lab{}
+
+.form_wrap{}
+.form_title_group{}
+.form_title_main{}
+.form_content_group{}
+.midform_vlist_w{}
+.midform_vlist{
+    &:last-of-type{}
+}
+.form_input_wrap{}
+input.form_input{}
+.inform_fxwrap{}
+.inform_fxwrap .inform_short_g{}
+.inform_fxwrap input.form_input{}
+.inform_fxwrap.active{}
+
+.inform_fsico{}
+.midform_vitem.type2{}
+.form_both_row{}
+.form_both_cell{}
+.form_both_cell:last-of-type{}
+.textlink_item{}
+.btn_botsubmit_w{}
+.btn_botsubmit{}
+.btn_botsubmit.type2{}
+.btn_botsubmit:last-of-type{}
+.form_bg{}
+.mid_icon_wrap{}
+.mid_icon{}
+.mid_icon_spec_group{}
+.mid_ispec_label{}
+.mid_ispec_data{}
+
+.ms_fieldset_wrap{}
+.ms_fieldset_wrap .btn_botsubmit_w{}
+.ms_fitem_wrap{}
+.ms_fitem{}
+.ms_fitem:last-of-type{}
+.ms_fitem_label{}
+.ms_fitem_form{}
+.ms_fxwrap{}
+.ms_fxdata{}
+.btn_msico{}
+.btn_msico.ico_calendar{}
+
+.data_result_wrap{}
+.data_more_row{}
+.btn_data_more{}
+.data_main_row{}
+.data_main_label{}
+.data_main_value{}
+
+.data_linkage_row{}
+.data_sort_wrap{}
+.data_sort_list{}
+.data_sort_list > li{}
+.data_sort_list > li:after{}
+.data_sort_list > li:last-of-type{}
+.data_sort_list > li:last-of-type:after{}
+.btn_data_sort{}
+
+.data_linkage_item_row{}
+.data_linkage_item_row .nodata_wrap{}
+.data_linkage_item_row .nodata{}
+.data_linkage_item{}
+.data_linkage_item_row.type2 .data_linkage_item{}
+.data_linkage_item:last-of-type{}
+.data_linkage_sub{}
+.data_linkage_main{}
+.data_linkage_author{}
+.data_linkage_price{}
+.data_price_label{}
+.data_price_inlabel{}
+.data_price_invalue{}
+.data_price_value{}
+.price_total_sub{}
+.price_total_main{}
+.price_total_value{}
+.price_total_unit{}
+
+.nodata_wrap{}
+.nodata{}
+
+select.form_bsel{}
+
+.data_fv_table{}
+.data_fv_table th,
+.data_fv_table td{}
+.data_fv_table th{}
+.data_fv_table td{}
+.data_fv_table.type2 .data_fvitem{}
+.data_fvwpsp{}
+.data_fvitem{}
+
+
+/* 공통 popup */
+.popup_wrap{position:fixed;top:0;left:50%;width:rem(720);height:100%;transform:translateX(-50%);z-index:100000;display:none;align-items: center;justify-content: center;min-width:rem(280);overflow:hidden;}
+.popup_item{
+    box-sizing: border-box;z-index:20; max-width:100%;max-height:100%; min-height:100vh; background:#fff; position:relative; display:flex; flex-direction: column;
+    -webkit-box-shadow: 2px 2px 14px 2px rgba(64,64,64,0.3); box-shadow: 2px 2px 14px 2px rgba(64,64,64,0.3); width:100%;
+}
+.popup_titlelow{text-align:center;border-bottom: 1px solid #e7e7e7;flex:0}
+.popup_title{font-size:1rem;color:#2b2b2b;padding:rem(25) rem(15) rem(15);font-weight:500;}
+.popup_contentlow{position:relative;overflow:hidden;overflow-y:auto;flex:1;font-size:rem(12);color:#333333;}
+.pcont_inwrap{padding:rem(25) rem(23) 0;}
+.popup_btnlow{flex:0}
+.popup_wrap.active{display:flex}
+.popup_wrap.active.motion .popup_item{opacity:1;}
+.popup_wrap.active.motion .bg_dim{opacity:.6;}
+.popup_wrap.active{display:flex}
+.btn_popup_close{}
+.btn_popup_close:before,
+.btn_popup_close:after{}
+.btn_popup_close:before{}
+.btn_popup_close:after{}
+
+.while_form_row{}
+.inline_calendar_form{}
+.inline_calendar_else{}
+.control_box_vitem_group{}
+.control_box_vitem{}
+.control_box_vitem:last-of-type{}
+.control_box_vcell{}
+.control_box_vcell:last-of-type{}
+.btn_control_box{}
+.btn_control_box.active{}
+.btn_control_box.active .btn_control_box_text{}
+.btn_control_box.active .btn_control_box_text:before{}
+.btn_control_box.active .btn_control_box_text:after{}
+.btn_control_box_text{}
+.btn_control_box.prev{}
+.btn_control_box.prev .btn_control_box_text:before{}
+.btn_control_box.prev .btn_control_box_text{}
+.btn_control_box.next{}
+.btn_control_box.next .btn_control_box_text:after{}
+.btn_control_box.next .btn_control_box_text{}
+.btn_control_box.current{}
+.btn_control_box.current .btn_control_box_text{}
+
+@media (max-width:720px){
+    .popup_wrap{left:0;transform:translateX(0);width:100%;}
+    .popup_item{}
+}

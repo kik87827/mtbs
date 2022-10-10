@@ -1,0 +1,78 @@
+/* 공통 선언 */
+body ::-webkit-scrollbar {width: 0.625rem;}
+body ::-webkit-scrollbar-thumb {background-color: #ccc;border-radius: 0.625rem;background-clip: padding-box;border: 2px solid transparent;}
+body ::-webkit-scrollbar-track {background-color: #fff;border-radius: 0.625rem;box-shadow: inset 0px 0px 5px white;}
+
+/* */ 
+html,
+.front_body{height:100%;min-height:100vh;}
+.page_wrap{position:relative;max-width:rem(720);margin:0 auto;min-width:rem(17.5);}
+.page_wrap:before,
+.page_wrap:after{display:block;content:'';width:calc(50% - rem(360));height:100%;position:fixed;top:0;background:#fff;z-index:70}
+.page_wrap:before{left:0;}
+.page_wrap:after{right:0;}
+
+.header_zone{}
+.header_inwrap{}
+.toplogo{}
+.toplogo_item{}
+.header_util_wrap{}
+.header_util{}
+.header_sym{}
+.mid_section{}
+.footer_zone{}
+.footer_inwrap{}
+.footer_mainitem{}
+.footer_subitem{}
+
+.header_sub_wrap{}
+.header_sub_title{}
+.header_sub_title_text{}
+.btn_header_close{}
+
+.header_zone.type2{}
+.header_zone.type2 .header_inwrap{}
+.header_smenu_zone{}
+.header_smenu_list{}
+.header_smenu_list > li{}
+.header_smenu_list > li.active{}
+.header_smenu{}
+.header_smenu:before{}
+.header_smenu.ico_s01:before{}
+.header_smenu.ico_s02:before{}
+.header_smenu.ico_s03:before{}
+.header_smenu.ico_s04:before{}
+.smenu_text{}
+
+li.active .header_smenu{}
+li.active .header_smenu:before{}
+
+.header_fxwrap{}
+.header_fxcell_main{}
+.header_fxcell_util{}
+.btn_head_fxwrap{}
+.btn_history{}
+.btn_history:after{}
+.sub_head_title{}
+.btn_headutil{}
+.btn_headutil.type2{}
+
+.form_tb_wrap{}
+.form_tb{}
+.form_tb th{}
+.form_tb td{}
+.form_thlabel{}
+input.form_box_input{}
+
+.inform_list{}
+.inform_list > li{}
+.inform_list > li:last-of-type{}
+.inform_else{}
+
+select.formbox_select{}
+textarea.form_box_textarea{}
+
+@media (max-width:720px){
+    .page_wrap:before,
+    .page_wrap:after{display:none;}
+}

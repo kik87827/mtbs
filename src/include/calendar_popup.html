@@ -1,0 +1,56 @@
+<!-- popup -->
+<div class="popup_wrap" id="calendarPopup">
+	<div class="bg_dim"></div>
+	<div class="popup_item">
+		<div class="popup_titlelow">
+			<h3 class="popup_title">검색조건 설정</h3>
+		</div>
+		<div class="popup_contentlow">
+			<div class="pcont_inwrap">
+				<div class="while_form_row">
+					<input type="date" class="inline_calendar_form" value="2020-12-01">
+					<span class="inline_calendar_else">~</span>
+					<input type="date" class="inline_calendar_form" value="2020-12-01">
+				</div>
+				<div class="control_box_vitem_group">
+					<div class="control_box_vitem">
+						<div class="control_box_vcell"><a href="#" class="btn_control_box prev"><span class="btn_control_box_text">어제</span></a></div>
+						<div class="control_box_vcell"><a href="#" class="btn_control_box current active"><span class="btn_control_box_text">오늘</span></a></div>
+						<div class="control_box_vcell"><a href="#" class="btn_control_box next"><span class="btn_control_box_text">내일</span></a></div>
+					</div>
+					<div class="control_box_vitem">
+						<div class="control_box_vcell"><a href="#" class="btn_control_box prev"><span class="btn_control_box_text">지난주</span></a></div>
+						<div class="control_box_vcell"><a href="#" class="btn_control_box current"><span class="btn_control_box_text">이번주</span></a></div>
+						<div class="control_box_vcell"><a href="#" class="btn_control_box next"><span class="btn_control_box_text">다음주</span></a></div>
+					</div>
+					<div class="control_box_vitem">
+						<div class="control_box_vcell"><a href="#" class="btn_control_box prev"><span class="btn_control_box_text">지난달</span></a></div>
+						<div class="control_box_vcell"><a href="#" class="btn_control_box current"><span class="btn_control_box_text">이번달</span></a></div>
+						<div class="control_box_vcell"><a href="#" class="btn_control_box next"><span class="btn_control_box_text">다음달</span></a></div>
+					</div>
+				</div>
+				<div class="btn_botsubmit_w"><a href="#" class="btn_botsubmit">조회</a></div>
+			</div>
+		</div>
+		<a href="javascript:;" class="btn_popup_close"><span class="hdtext">닫기</span></a>
+	</div>
+</div>
+<!-- // popup -->
+<script>
+	// 퍼블확인용
+	let url = window.location.href.split('?')[1];
+	let url_2 = url !== undefined ? url.split('#')[0] : null;
+	document.addEventListener("DOMContentLoaded", function() {
+		if(url_2 === "calendar"){
+			var calendar_obj = new DesignPopup({
+				selector: "#calendarPopup"
+			});
+		}
+		let calendar_call = document.querySelector("#calendar_call");
+		calendar_call.addEventListener("click",(e)=>{
+			var calendar_obj = new DesignPopup({
+				selector: "#calendarPopup"
+			});
+		},false);
+	});
+</script>
