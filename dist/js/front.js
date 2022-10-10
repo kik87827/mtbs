@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
   commonEvent();
   commonForm();
 });
-window.addEventListener("load", function() {});
+window.addEventListener("load", function() {
+  stickyMenu();
+});
 
 function commonInit() {
   let touchstart = "ontouchstart" in window;
@@ -28,6 +30,26 @@ function commonInit() {
 
   function browserAdd(opt) {
     document.querySelector("html").classList.add(opt);
+  }
+}
+
+function stickyMenu(){
+  let header_smenu_zone = document.querySelector(".header_smenu_zone");
+  let header_smenu_list = null;
+  let header_smenu_zone_pos = 0;
+  if(header_smenu_zone !== null){
+    header_smenu_list = header_smenu_zone.querySelector(".header_smenu_list");
+    header_smenu_zone.style.minHeight = header_smenu_list.getBoundingClientRect().height + "px";
+    header_smenu_zone_pos = window.scrollY + header_smenu_zone.getBoundingClientRect().top;
+    console.log(window.scrollY , header_smenu_zone.getBoundingClientRect().top);
+    window.addEventListener("scroll",()=>{
+      let scroll = window.scrollY;
+      if(scroll>header_smenu_zone_pos){
+        header_smenu_list.classList.add("fixed");
+      }else{
+        header_smenu_list.classList.remove("fixed");
+      }
+    });
   }
 }
 
@@ -108,7 +130,7 @@ function commonEvent() {
 
 
 function commonForm() {
-  addDynamicEventListener(document.body, 'change', '.form_select', function(e) {
+  addDynamicEventListener(document.body, 'change', '.form_bsel', function(e) {
     let thisTarget = e.target;
     if (thisTarget.value === "0") {
       thisTarget.classList.add("ready");
@@ -194,6 +216,7 @@ function DesignPopup(option) {
   this.domBody = document.querySelector("body");
   this.pagewrap = document.querySelector(".page_wrap");
   this.btn_closeTrigger = null;
+  this.btn_close = null;
   this.bg_design_popup = null;
   this.scrollValue = 0;
   this.popupShow(option.selector);
@@ -210,12 +233,13 @@ DesignPopup.prototype.popupShow = function (target) {
   this.scrollValue = window.pageYOffset;
   this.domHtml.classList.add("touchDis");
   this.selector.classList.add("active");
-setTimeout(function(){
-  objThis.selector.classList.add("motion");
-},30);
+  setTimeout(function(){
+    objThis.selector.classList.add("motion");
+  },30);
 
 
   this.btn_closeTrigger = this.selector.querySelectorAll(".close_trigger");
+  this.btn_close = this.selector.querySelectorAll(".btn_popup_close");
   
   this.bg_design_popup = this.selector.querySelector(".popup_wrap .bg_dim");
   this.domBody.append(this.selector);
@@ -240,25 +264,33 @@ DesignPopup.prototype.popupHide = function (target) {
               objThis.domBody.style.marginTop = 0;
               window.scrollTo(0, parseInt(objThis.domBody.getAttribute("data-scr")));
           }
-      },420);
+      },0);
   }
 }
 
 DesignPopup.prototype.bindEvent = function () {
   var objThis = this;
-
-  if (this.btn_closeTrigger.length) {
-      for (var i = 0; i < this.btn_closeTrigger.length; i++) {
-          this.btn_closeTrigger[i].addEventListener("click", function () {
-              objThis.popupHide(objThis.selector);
-          }, false);
-      }
-  }
-
-  if (this.bg_design_popup !== null){
-      this.bg_design_popup.addEventListener("click", function (e) {
-          e.preventDefault();
+  var closeItemArray = [...this.btn_closeTrigger,...this.btn_close];
+  console.log(closeItemArray);
+  if (closeItemArray.length) {
+    closeItemArray.forEach((element)=>{
+      element.addEventListener("click", function () {
           objThis.popupHide(objThis.selector);
       }, false);
+    });
   }
+  // if (this.btn_closeTrigger.length) {
+  //     for (var i = 0; i < this.btn_closeTrigger.length; i++) {
+  //         this.btn_closeTrigger[i].addEventListener("click", function () {
+  //             objThis.popupHide(objThis.selector);
+  //         }, false);
+  //     }
+  // }
+
+  // if (this.bg_design_popup !== null){
+  //     this.bg_design_popup.addEventListener("click", function (e) {
+  //         e.preventDefault();
+  //         objThis.popupHide(objThis.selector);
+  //     }, false);
+  // }
 };
