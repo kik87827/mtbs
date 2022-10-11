@@ -5,7 +5,7 @@ body ::-webkit-scrollbar-track {background-color: #fff;border-radius: 0.625rem;b
 
 /* */ 
 html,
-.front_body{height:100%;min-height:100vh;}
+.front_body{}
 .page_wrap{position:relative;max-width:rem(720);margin:0 auto;min-width:rem(17.5);}
 .page_wrap:before,
 .page_wrap:after{display:block;content:'';width:calc(50% - rem(360));height:100%;position:fixed;top:0;background:#fff;z-index:70}
@@ -21,6 +21,7 @@ html,
 .header_sym{font-weight:500;}
 .mid_section{padding:0 rem(18.5) rem(48);
     &.type2{padding-top:rem(24);}
+    &.type3{padding-right:0;padding-left:0;}
 }
 .footer_zone{background:#fdfdfd;border-top:1px solid #dedede;}
 .footer_inwrap{padding:rem(25) rem(18.5);}

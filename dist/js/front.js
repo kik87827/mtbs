@@ -3,10 +3,26 @@ document.addEventListener("DOMContentLoaded", function() {
   mbTotal();
   commonEvent();
   commonForm();
+  inlineCalendar();
 });
 window.addEventListener("load", function() {
   stickyMenu();
 });
+
+function inlineCalendar(){
+  let inline_calendar_form = document.querySelectorAll(".inline_calendar_form");
+  if(inline_calendar_form.length===0){return;}
+  inline_calendar_form.forEach((element)=>{
+    let thisObj = element;
+    let thisObjform = thisObj.querySelector(".inline_calendar");
+    let thisObjlabel = thisObj.querySelector(".inline_calendar_label");
+    thisObjlabel.textContent = thisObjform.value;
+
+    thisObjform.addEventListener("change",(e)=>{
+      thisObjlabel.textContent = thisObjform.value;
+    });
+  })
+}
 
 function commonInit() {
   let touchstart = "ontouchstart" in window;
@@ -41,7 +57,7 @@ function stickyMenu(){
     header_smenu_list = header_smenu_zone.querySelector(".header_smenu_list");
     header_smenu_zone.style.minHeight = header_smenu_list.getBoundingClientRect().height + "px";
     header_smenu_zone_pos = window.scrollY + header_smenu_zone.getBoundingClientRect().top;
-    console.log(window.scrollY , header_smenu_zone.getBoundingClientRect().top);
+    // console.log(window.scrollY , header_smenu_zone.getBoundingClientRect().top);
     window.addEventListener("scroll",()=>{
       let scroll = window.scrollY;
       if(scroll>header_smenu_zone_pos){
@@ -271,7 +287,7 @@ DesignPopup.prototype.popupHide = function (target) {
 DesignPopup.prototype.bindEvent = function () {
   var objThis = this;
   var closeItemArray = [...this.btn_closeTrigger,...this.btn_close];
-  console.log(closeItemArray);
+  // console.log(closeItemArray);
   if (closeItemArray.length) {
     closeItemArray.forEach((element)=>{
       element.addEventListener("click", function () {

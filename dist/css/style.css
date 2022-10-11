@@ -863,12 +863,6 @@ body ::-webkit-scrollbar-track {
 }
 
 /* */
-html,
-.front_body {
-  height: 100%;
-  min-height: 100vh;
-}
-
 .page_wrap {
   position: relative;
   max-width: 45rem;
@@ -943,6 +937,10 @@ html,
 }
 .mid_section.type2 {
   padding-top: 1.5rem;
+}
+.mid_section.type3 {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .footer_zone {
@@ -2658,6 +2656,9 @@ input.form_input:focus {
 .btn_botsubmit_w {
   margin-top: 1.5625rem;
 }
+.btn_botsubmit_w.type2 {
+  margin-top: 1.125rem;
+}
 
 .btn_botsubmit {
   display: block;
@@ -3189,6 +3190,7 @@ select.form_bsel.ready {
 }
 .data_fv_table th {
   width: 1px;
+  padding-right: 1.125rem;
 }
 .data_fv_table tr:last-of-type th, .data_fv_table tr:last-of-type td {
   padding-bottom: 0;
@@ -3208,12 +3210,80 @@ select.form_bsel.ready {
 }
 
 .data_fvitem {
+  display: inline-block;
   font-size: 0.9375rem;
   color: #000000;
   line-height: 1.3;
   font-weight: 500;
 }
+.data_fvitem.color_2 {
+  color: #ed4444;
+}
 
+.data_view_title_zone {
+  padding: 1.625rem 1.15625rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.data_view_title {
+  font-size: 1.0625rem;
+  color: #000000;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.data_vt_fxwrap {
+  font-size: 0.875rem;
+  color: #6d6c6c;
+  line-height: 1;
+  font-weight: 500;
+  display: flex;
+  margin-top: 0.75rem;
+}
+
+.data_vt_label {
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 0.625rem;
+}
+
+.data_view_spec {
+  padding: 1.40625rem 1.15625rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.dv_spec_title {
+  font-size: 0.9375rem;
+  color: #000000;
+  line-height: 1;
+  font-weight: 500;
+  margin-bottom: 1.125rem;
+}
+
+.data_fvitem_inwrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.data_fvintext {
+  display: inline-block;
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.data_fvtail_group {
+  margin-left: 0.625rem;
+}
+
+.data_fvtail {
+  display: inline-block;
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1;
+}
 /* 공통 popup */
 .popup_wrap {
   position: fixed;
@@ -3228,18 +3298,21 @@ select.form_bsel.ready {
   justify-content: center;
   min-width: 17.5rem;
   overflow: hidden;
+  flex-wrap: wrap;
 }
 
 .popup_item {
   box-sizing: border-box;
   z-index: 20;
   max-width: 100%;
-  max-height: 100%;
+  height: 100%;
   min-height: 100vh;
   background: #fff;
   position: relative;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 0;
   box-shadow: 2px 2px 14px 2px rgba(64, 64, 64, 0.3);
   width: 100%;
 }
@@ -3251,6 +3324,7 @@ select.form_bsel.ready {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .popup_title {
@@ -3291,10 +3365,6 @@ select.form_bsel.ready {
   opacity: 0.6;
 }
 
-.popup_wrap.active {
-  display: flex;
-}
-
 .btn_popup_close {
   display: block;
   width: 3.21875rem;
@@ -3333,6 +3403,151 @@ select.form_bsel.ready {
   -webkit-transform: rotate(-45deg);
 }
 
+.inline_calendar_form {
+  overflow: hidden;
+  position: relative;
+  height: 1.25rem;
+  padding: 0 1.625rem 0 0;
+  background: transparent url("../images/icon_calendar2.png") no-repeat 100% 50%/1.25rem auto;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+}
+
+.inline_calendar_label {
+  line-height: 1;
+  font-size: 0.9375rem;
+  color: #2b2b2b;
+  display: inline-block;
+  padding: 0.125rem 0.125rem 0 0;
+}
+
+.inline_calendar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.inline_calendar::-webkit-date-and-time-value {
+  text-align: left;
+}
+.inline_calendar::-webkit-calendar-picker-indicator {
+  width: 20px;
+  height: 20px;
+}
+
+.ios .inline_calendar::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input.inline_calendar_form::-webkit-date-and-time-value {
+  text-align: left;
+}
+
+input.inline_calendar_form::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+input.inline_calendar_form::-webkit-date-and-time-value {
+  text-align: left;
+}
+
+.while_form_row {
+  border-top: 1px solid #a3a3a3;
+  border-bottom: 1px solid #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9375rem 0;
+}
+
+.inline_calendar_else {
+  display: inline-block;
+  line-height: 1;
+  font-size: 0.9375rem;
+  padding: 0 0.625rem;
+}
+
+.control_box_vitem_group {
+  margin-top: 1rem;
+}
+
+.control_box_vitem {
+  display: flex;
+  margin: 0 -0.140625rem 0.234375rem;
+  height: 2.875rem;
+}
+.control_box_vitem:last-of-type {
+  margin-bottom: 0;
+}
+
+.btn_control_box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b0b0b0;
+  margin: 0 0.140625rem;
+  border-radius: 0.3125rem;
+}
+.btn_control_box.active {
+  border: 2px solid #4f46c6;
+}
+.btn_control_box.active .btn_control_box_text {
+  color: #4f46c6;
+  font-weight: 500;
+}
+.btn_control_box.active .btn_control_box_text:before, .btn_control_box.active .btn_control_box_text:after {
+  border-color: #4f46c6 !important;
+}
+.btn_control_box.prev .btn_control_box_text {
+  padding-left: 0.9375rem;
+}
+.btn_control_box.prev .btn_control_box_text:before {
+  display: block;
+  content: "";
+  width: 0.40625rem;
+  height: 0.40625rem;
+  border-left: 2px solid #7c7c7c;
+  border-bottom: 2px solid #7c7c7c;
+  position: absolute;
+  top: 0.1875rem;
+  left: 0;
+  transform: translateZ(0) rotate(45deg);
+}
+.btn_control_box.next .btn_control_box_text {
+  padding-right: 0.9375rem;
+}
+.btn_control_box.next .btn_control_box_text:after {
+  display: block;
+  content: "";
+  width: 0.40625rem;
+  height: 0.40625rem;
+  border-right: 2px solid #7c7c7c;
+  border-top: 2px solid #7c7c7c;
+  position: absolute;
+  top: 0.1875rem;
+  right: 0;
+  transform: translateZ(0) rotate(45deg);
+}
+
+.btn_control_box_text {
+  display: inline-block;
+  font-size: 0.9375rem;
+  color: #333333;
+  position: relative;
+  line-height: 1;
+}
+
+@media (max-width: 1023px) and (orientation: landscape) {
+  .popup_wrap {
+    left: 0;
+    transform: translateX(0);
+    width: 100%;
+  }
+}
 @media (max-width: 720px) {
   .popup_wrap {
     left: 0;
