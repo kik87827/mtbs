@@ -69,6 +69,17 @@ function stickyMenu(){
   }
 }
 
+function setVh(){
+  const form_wrap = document.querySelector(".form_wrap");
+  
+
+  function action(){
+    form_wrap.style.minHeight = `${window.innerHeight}px`;
+  }
+  action();
+  window.addEventListener('resize', action);
+};
+
 
 function mbTotal() {
   const touchstart = "ontouchstart" in window;
