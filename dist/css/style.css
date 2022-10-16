@@ -895,6 +895,15 @@ body ::-webkit-scrollbar-track {
   position: relative;
   z-index: 20;
 }
+.header_zone.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+}
 
 .header_inwrap {
   height: 4.375rem;

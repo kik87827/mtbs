@@ -12,7 +12,9 @@ html,
 .page_wrap:before{left:0;}
 .page_wrap:after{right:0;}
 
-.header_zone{border-bottom:1px solid #cacaca;position:relative;z-index:20;}
+.header_zone{border-bottom:1px solid #cacaca;position:relative;z-index:20;
+    &.sticky{position:sticky;z-index:20;top:0;left:0;width:100%;background:#fff;}
+}
 .header_inwrap{height:rem(70);display:flex;align-items: center;justify-content: space-between;padding:0 rem(18.5);}
 .toplogo{display:inline-block;line-height:0;}
 .toplogo_item{width:rem(146.5);height:rem(17.5);background:url("../images/toplogo.png") no-repeat 0 0/100% auto;display:inline-block;vertical-align: top;}
