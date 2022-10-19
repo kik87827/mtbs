@@ -1298,6 +1298,7 @@ body ::-webkit-scrollbar-track {
   width: 280px;
   z-index: 10000 !important;
   display: none;
+  font-size: 0.875rem;
 }
 
 .ui-datepicker .ui-datepicker-header {
@@ -1358,7 +1359,7 @@ body ::-webkit-scrollbar-track {
   width: 173px;
   text-align: center;
   font-size: 17px;
-  font-family: "nsr";
+  font-family: "Noto Sans KR";
 }
 
 .ui-datepicker .ui-datepicker-title:after {
@@ -1368,7 +1369,7 @@ body ::-webkit-scrollbar-track {
 }
 
 .ui-datepicker .ui-datepicker-title select {
-  font-size: 12px;
+  font-size: 14px;
   margin: 1px 0;
 }
 
@@ -1381,7 +1382,7 @@ body ::-webkit-scrollbar-track {
 
 .ui-datepicker table {
   width: 100%;
-  font-size: 12px;
+  font-size: 14px;
   border-collapse: collapse;
   margin: 0 0 0.4em;
 }
@@ -1509,7 +1510,7 @@ body ::-webkit-scrollbar-track {
 /* Component containers
 ----------------------------------*/
 .ui-widget {
-  font-family: "Noto Sans Korean";
+  font-family: "Noto Sans KR";
   font-size: 1em;
 }
 
@@ -1521,7 +1522,7 @@ body ::-webkit-scrollbar-track {
 .ui-widget select,
 .ui-widget textarea,
 .ui-widget button {
-  font-family: "Noto Sans Korean";
+  font-family: "Noto Sans KR";
   font-size: 1em;
 }
 
@@ -1552,9 +1553,9 @@ body ::-webkit-scrollbar-track {
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
-  font-family: "Noto Sans Korean";
+  font-family: "Noto Sans KR";
   color: #363636;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .ui-state-default a,
@@ -1586,10 +1587,6 @@ body ::-webkit-scrollbar-track {
   text-decoration: none;
 }
 
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
-  outline: 1px dashed #000;
-}
-
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
@@ -1615,14 +1612,14 @@ body ::-webkit-scrollbar-track {
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
-  background: #404374;
+  background: #4f46c6;
   color: #fff;
   border-radius: 100%;
   min-width: 8px;
   text-align: center;
   padding: 0;
   height: 32px;
-  line-height: 34px;
+  line-height: 31px;
   width: 32px;
   margin: 0 auto;
 }
@@ -1685,37 +1682,6 @@ body ::-webkit-scrollbar-track {
 .ui-icon {
   width: 16px;
   height: 16px;
-}
-
-.ui-icon,
-.ui-widget-content .ui-icon {
-  background-image: url("../images/jqueryui/ui-icons_444444_256x240.png");
-}
-
-.ui-widget-header .ui-icon {
-  background-image: url("../images/jqueryui/ui-icons_444444_256x240.png");
-}
-
-.ui-state-default .ui-icon {
-  background-image: url("../images/jqueryui/ui-icons_777777_256x240.png");
-}
-
-.ui-state-hover .ui-icon,
-.ui-state-focus .ui-icon {
-  background-image: url("../images/jqueryui/ui-icons_555555_256x240.png");
-}
-
-.ui-state-active .ui-icon {
-  background-image: url("../images/jqueryui/ui-icons_ffffff_256x240.png");
-}
-
-.ui-state-highlight .ui-icon {
-  background-image: url("../images/jqueryui/ui-icons_777620_256x240.png");
-}
-
-.ui-state-error .ui-icon,
-.ui-state-error-text .ui-icon {
-  background-image: url("../images/jqueryui/ui-icons_cc0000_256x240.png");
 }
 
 /* positioning */
@@ -2483,10 +2449,10 @@ body ::-webkit-scrollbar-track {
 }
 
 .ui-datepicker-title select {
-  font-family: "Malgun Gothic", "맑은 고딕", "malgunweb";
+  font-family: "Noto Sans KR";
   color: #333;
-  padding: 0 35px 2px 5px;
-  height: 23px;
+  padding: 0 20px 2px 5px;
+  height: 26px;
   box-sizing: border-box;
   min-width: 80px;
   border: 1px solid #bbbbbb;
@@ -2585,6 +2551,10 @@ input.form_input {
   line-height: 1;
   width: 100%;
   font-size: 1rem;
+}
+input.form_input.calendar_call {
+  padding-right: 3.125rem !important;
+  background: url("../images/icon_calendar3.png") no-repeat 100% 50%/2.9375rem auto;
 }
 input.form_input:focus {
   border-color: #000000;
@@ -2831,6 +2801,9 @@ input.form_input:focus {
   flex: 1;
   display: flex;
   align-items: center;
+}
+.ms_fitem_form .form_input {
+  padding-left: 0 !important;
 }
 
 .ms_fxdata {
@@ -3386,6 +3359,12 @@ select.form_bsel.ready {
   font-size: 0.75rem;
   color: #333333;
 }
+.popup_contentlow .ui-datepicker {
+  left: 50% !important;
+  transform: translateX(-50%);
+  width: 31.25rem !important;
+  position: absolute !important;
+}
 
 .pcont_inwrap {
   padding: 1.875rem 1.15625rem 3.75rem;
@@ -3456,6 +3435,35 @@ select.form_bsel.ready {
   align-items: center;
 }
 
+input.input_calendar {
+  border: 0;
+  position: relative;
+  font-size: 0.9375rem;
+  color: #2b2b2b;
+  height: 1.25rem;
+  padding: 0.9375rem 1.625rem 0.9375rem 0;
+  line-height: 1;
+  background: transparent url("../images/icon_calendar2.png") no-repeat 100% 50%/1.25rem auto;
+  line-height: 1;
+  width: 5.625rem;
+}
+
+input.inline_calendar_range {
+  overflow: hidden;
+  width: 12.5rem;
+  font-size: 0.9375rem;
+  color: #2b2b2b;
+  display: inline-block;
+  border: 0;
+  position: relative;
+  height: 1.25rem;
+  padding: 0 1.625rem 0 0;
+  background: transparent url("../images/icon_calendar2.png") no-repeat 100% 50%/1.25rem auto;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+}
+
 .inline_calendar_label {
   line-height: 1;
   font-size: 0.9375rem;
@@ -3484,6 +3492,14 @@ select.form_bsel.ready {
   display: none;
 }
 
+.while_form_row {
+  border-top: 1px solid #a3a3a3;
+  border-bottom: 1px solid #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 input.inline_calendar_form::-webkit-date-and-time-value {
   text-align: left;
 }
@@ -3494,15 +3510,6 @@ input.inline_calendar_form::-webkit-calendar-picker-indicator {
 
 input.inline_calendar_form::-webkit-date-and-time-value {
   text-align: left;
-}
-
-.while_form_row {
-  border-top: 1px solid #a3a3a3;
-  border-bottom: 1px solid #d9d9d9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.9375rem 0;
 }
 
 .inline_calendar_else {
@@ -3602,6 +3609,14 @@ input.inline_calendar_form::-webkit-date-and-time-value {
     white-space: normal;
   }
 }
+@media (max-width: 1023px) {
+  .popup_contentlow .ui-datepicker {
+    width: calc(100% - 40px) !important;
+    box-sizing: border-box;
+    left: 20px !important;
+    transform: translateX(0) !important;
+  }
+}
 .mid_section.main_ms {
   padding: 0 0 3rem;
 }
@@ -3696,5 +3711,45 @@ input.inline_calendar_form::-webkit-date-and-time-value {
   color: #2b2b2b;
   line-height: 1.3;
   font-weight: 500;
+}
+
+.layerclose {
+  display: block;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+.layerclose:before,
+.layerclose:after {
+  width: 18px;
+  height: 2px;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #646464;
+  margin: -1px 0 0 -9px;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+}
+
+.layerclose:before {
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.layerclose:after {
+  transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
 /*# sourceMappingURL=style.css.map */

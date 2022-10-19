@@ -264,6 +264,8 @@ DesignPopup.prototype.popupShow = function (target) {
     objThis.selector.classList.add("motion");
   },30);
 
+  
+
 
   this.btn_closeTrigger = this.selector.querySelectorAll(".close_trigger");
   this.btn_close = this.selector.querySelectorAll(".btn_popup_close");
