@@ -919,9 +919,6 @@ body ::-webkit-scrollbar-track {
 }
 
 .toplogo_item {
-  width: 9.15625rem;
-  height: 1.09375rem;
-  background: url("../images/toplogo.png") no-repeat 0 0/100% auto;
   display: inline-block;
   vertical-align: top;
 }
