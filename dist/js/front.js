@@ -51,21 +51,49 @@ function commonInit() {
 
 function stickyMenu(){
   let header_smenu_zone = document.querySelector(".header_smenu_zone");
+  let header_smenu_list_wrap = null;
   let header_smenu_list = null;
+  let header_smenu_li = null;
   let header_smenu_zone_pos = 0;
   if(header_smenu_zone !== null){
+    header_smenu_list_wrap = header_smenu_zone.querySelector(".header_smenu_list_wrap");
     header_smenu_list = header_smenu_zone.querySelector(".header_smenu_list");
-    header_smenu_zone.style.minHeight = header_smenu_list.getBoundingClientRect().height + "px";
-    header_smenu_zone_pos = window.scrollY + header_smenu_zone.getBoundingClientRect().top;
+    header_smenu_li = header_smenu_zone.querySelectorAll(".header_smenu_list > li");
+    getSetting();
+    
+    
     // console.log(window.scrollY , header_smenu_zone.getBoundingClientRect().top);
     window.addEventListener("scroll",()=>{
       let scroll = window.scrollY;
       if(scroll>header_smenu_zone_pos){
-        header_smenu_list.classList.add("fixed");
+        header_smenu_list_wrap.classList.add("fixed");
       }else{
-        header_smenu_list.classList.remove("fixed");
+        header_smenu_list_wrap.classList.remove("fixed");
       }
     });
+    window.addEventListener("resize",()=>{
+      getSetting();
+    });
+
+    function getSetting(){
+      header_smenu_zone.style.removeProperty("min-height");
+      header_smenu_zone.style.minHeight = header_smenu_list_wrap.getBoundingClientRect().height + "px";
+      header_smenu_zone_pos = window.scrollY + header_smenu_zone.getBoundingClientRect().top;
+      activeTab();
+    }
+
+    function activeTab(){
+      header_smenu_li.forEach((element,index)=>{
+        if(element.classList.contains("active")){
+          const elementObj = element;
+          let elementObjLeft = elementObj.getBoundingClientRect().left;
+          let elementObjWidth = elementObj.getBoundingClientRect().width;
+          if(window.innerWidth < elementObjLeft + elementObjWidth){
+            header_smenu_list_wrap.scrollLeft = (elementObjLeft + elementObjWidth + 18.5) - window.innerWidth;
+          }
+        }
+      })
+    }
   }
 }
 

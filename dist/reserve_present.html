@@ -19,34 +19,38 @@
 	<div class="page_wrap full_page_wrap">
 		<header class="header_zone">
 			<div class="header_inwrap">
-				<h1 class="toplogo"><a href="#" class="toplogo_item"><span class="hdtext">Mclick System</span></a></h1>
+				<h1 class="toplogo"><a href="#" class="toplogo_item"><span class="toplogo_text">엠클릭 시스템</span></a></h1>
 				<div class="header_util_wrap">
 					<p class="header_util">안녕하세요.<strong class="header_sym">성민영님</strong></p>
 				</div>
 			</div>
 			<div class="header_smenu_zone">
-				<ul class="header_smenu_list">
-					<li>
-						<a href="#" class="header_smenu ico_s01">
-							<div class="smenu_text">상담현황</div>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="header_smenu ico_s02">
-							<div class="smenu_text">출발현황</div>
-						</a>
-					</li>
-					<li class="active">
-						<a href="#" class="header_smenu ico_s03">
-							<div class="smenu_text">예약현황</div>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="header_smenu ico_s04">
-							<div class="smenu_text">입금현황</div>
-						</a>
-					</li>
-				</ul>
+				<!-- 230123 추가 -->
+				<div class="header_smenu_list_wrap">
+					<ul class="header_smenu_list">
+						<li>
+							<a href="#" class="header_smenu ico_s01">
+								<div class="smenu_text">상담현황</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="header_smenu ico_s02">
+								<div class="smenu_text">출발현황</div>
+							</a>
+						</li>
+						<li class="active">
+							<a href="#" class="header_smenu ico_s03">
+								<div class="smenu_text">예약현황</div>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="header_smenu ico_s04">
+								<div class="smenu_text">입금현황</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- // 230123 추가 -->
 			</div>
 		</header>
 		<section class="mid_section">
@@ -207,7 +211,25 @@
 					});
 				}, false);
 				calendarCall();
+				btnActiveAction(); /* 230123 추가 */
 			});
+
+			/* 230123 추가 */
+			function btnActiveAction() {
+				const btn_control_box = document.querySelectorAll(".btn_control_box");
+				let active_control_box = document.querySelector(".btn_control_box.active");
+				btn_control_box.forEach((element, index) => {
+					element.addEventListener("click", (e) => {
+						e.preventDefault();
+						if (active_control_box) {
+							active_control_box.classList.remove("active");
+						}
+						e.currentTarget.classList.add("active");
+
+						active_control_box = e.currentTarget;
+					});
+				})
+			}
 
 			function calendarCall() {
 				$(function() {

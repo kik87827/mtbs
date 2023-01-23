@@ -15,6 +15,7 @@
 body {
   font-family: "Noto Sans KR", Dotum, verdana, sans-serif;
   font-size: 16px;
+  font-weight: 350;
 }
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, address, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, input, textarea, table, caption, tbody, tfoot, thead, tr, th, td, header, footer, nav, menu, section, article, aside, main, video {
@@ -262,33 +263,52 @@ html.smooth {
 
 @font-face {
   font-family: "Noto Sans KR";
-  font-style: normal;
-  font-weight: 300;
-  src: local("Noto Sans KR"), url("./webfont/NotoSans-Light.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Noto Sans KR";
-  font-style: normal;
-  font-weight: 350;
-  src: local("Noto Sans KR"), url("./webfont/NotoSans-DemiLight.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Noto Sans KR";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Noto Sans KR"), url("./webfont/NotoSans-Regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Noto Sans KR";
-  font-style: normal;
-  font-weight: 500;
-  src: local("Noto Sans KR"), url("./webfont/NotoSans-Medium.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Noto Sans KR";
-  font-style: normal;
+  src: url("./webfont/NotoSans-Bold.eot");
+  src: url("./webfont/NotoSans-Bold.eot?#iefix") format("embedded-opentype"), url("./webfont/NotoSans-Bold.woff2") format("woff2"), url("./webfont/NotoSans-Bold.woff") format("woff"), url("./webfont/NotoSans-Bold.ttf") format("truetype"), url("./webfont/NotoSans-Bold.svg#NotoSans-Bold") format("svg");
   font-weight: 700;
-  src: local("Noto Sans KR"), url("./webfont/NotoSans-Bold.woff2") format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("./webfont/NotoSans-Regular.eot");
+  src: url("./webfont/NotoSans-Regular.eot?#iefix") format("embedded-opentype"), url("./webfont/NotoSans-Regular.woff2") format("woff2"), url("./webfont/NotoSans-Regular.woff") format("woff"), url("./webfont/NotoSans-Regular.ttf") format("truetype"), url("./webfont/NotoSans-Regular.svg#NotoSans-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("./webfont/NotoSans-Thin.eot");
+  src: url("./webfont/NotoSans-Thin.eot?#iefix") format("embedded-opentype"), url("./webfont/NotoSans-Thin.woff2") format("woff2"), url("./webfont/NotoSans-Thin.woff") format("woff"), url("./webfont/NotoSans-Thin.ttf") format("truetype"), url("./webfont/NotoSans-Thin.svg#NotoSans-Thin") format("svg");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("./webfont/NotoSans-Black.eot");
+  src: url("./webfont/NotoSans-Black.eot?#iefix") format("embedded-opentype"), url("./webfont/NotoSans-Black.woff2") format("woff2"), url("./webfont/NotoSans-Black.woff") format("woff"), url("./webfont/NotoSans-Black.ttf") format("truetype"), url("./webfont/NotoSans-Black.svg#NotoSans-Black") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("./webfont/NotoSans-Light.eot");
+  src: url("./webfont/NotoSans-Light.eot?#iefix") format("embedded-opentype"), url("./webfont/NotoSans-Light.woff2") format("woff2"), url("./webfont/NotoSans-Light.woff") format("woff"), url("./webfont/NotoSans-Light.ttf") format("truetype"), url("./webfont/NotoSans-Light.svg#NotoSans-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("./webfont/NotoSans-DemiLight.eot");
+  src: url("./webfont/NotoSans-DemiLight.eot?#iefix") format("embedded-opentype"), url("./webfont/NotoSans-DemiLight.woff2") format("woff2"), url("./webfont/NotoSans-DemiLight.woff") format("woff"), url("./webfont/NotoSans-DemiLight.ttf") format("truetype"), url("./webfont/NotoSans-DemiLight.svg#NotoSans-Light") format("svg");
+  font-weight: 350;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("./webfont/NotoSans-Medium.eot");
+  src: url("./webfont/NotoSans-Medium.eot?#iefix") format("embedded-opentype"), url("./webfont/NotoSans-Medium.woff2") format("woff2"), url("./webfont/NotoSans-Medium.woff") format("woff"), url("./webfont/NotoSans-Medium.ttf") format("truetype"), url("./webfont/NotoSans-Medium.svg#NotoSans-Light") format("svg");
+  font-weight: 500;
+  font-style: normal;
 }
 /**
  * Swiper 4.5.0
@@ -845,18 +865,18 @@ button.swiper-pagination-bullet {
 }
 
 /* 공통 선언 */
-body ::-webkit-scrollbar {
+html:not(.touchmode) ::-webkit-scrollbar {
   width: 0.625rem;
 }
 
-body ::-webkit-scrollbar-thumb {
+html:not(.touchmode) ::-webkit-scrollbar-thumb {
   background-color: #ccc;
   border-radius: 0.625rem;
   background-clip: padding-box;
   border: 2px solid transparent;
 }
 
-body ::-webkit-scrollbar-track {
+html:not(.touchmode) ::-webkit-scrollbar-track {
   background-color: #fff;
   border-radius: 0.625rem;
   box-shadow: inset 0px 0px 5px white;
@@ -906,7 +926,7 @@ body ::-webkit-scrollbar-track {
 }
 
 .header_inwrap {
-  height: 4.375rem;
+  height: 3.125rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -919,11 +939,16 @@ body ::-webkit-scrollbar-track {
 }
 
 .toplogo_item {
-  width: 9.15625rem;
-  height: 1.09375rem;
-  background: url("../images/toplogo.png") no-repeat 0 0/100% auto;
   display: inline-block;
   vertical-align: top;
+}
+
+.toplogo_text {
+  display: inline-block;
+  font-size: 1.125rem;
+  color: #1b1b1b;
+  line-height: 1;
+  font-weight: 700;
 }
 
 .header_util_wrap {
@@ -942,7 +967,7 @@ body ::-webkit-scrollbar-track {
 }
 
 .mid_section {
-  padding: 0 1.15625rem 3rem;
+  padding: 0.9375rem 1.15625rem 3rem;
 }
 .mid_section.type2 {
   padding-top: 1.5rem;
@@ -958,7 +983,7 @@ body ::-webkit-scrollbar-track {
 }
 
 .footer_inwrap {
-  padding: 1.5625rem 1.15625rem;
+  padding: 1.125rem 1.15625rem;
   font-size: 0.9375rem;
 }
 
@@ -969,11 +994,11 @@ body ::-webkit-scrollbar-track {
 
 .footer_subitem {
   color: #4e4e4e;
-  margin-top: 0.46875rem;
+  margin-top: 0.125rem;
 }
 
 .header_sub_wrap {
-  height: 4.375rem;
+  height: 3.125rem;
   display: flex;
   justify-content: center;
   line-height: 0;
@@ -991,10 +1016,10 @@ body ::-webkit-scrollbar-track {
 
 .btn_header_close {
   display: block;
-  width: 3.21875rem;
-  height: 3.21875rem;
+  width: 3.125rem;
+  height: 3.125rem;
   position: absolute;
-  top: 0.5625rem;
+  top: 0;
   right: 0;
 }
 .btn_header_close:before, .btn_header_close:after {
@@ -1037,25 +1062,47 @@ body ::-webkit-scrollbar-track {
 .full_page_wrap > .mid_section {
   flex: 1;
   background: #f5f5f5;
-  padding: 1.25rem 1.15625rem 2.5rem;
+  padding: 0.9375rem 1.15625rem 1.875rem;
 }
 
 .header_smenu_zone {
   position: relative;
   text-align: center;
+  top: 1px;
+  min-height: 3.4375rem;
+}
+
+.header_smenu_list_wrap {
+  overflow: hidden;
+  overflow-x: overlay;
+  position: relative;
+  padding-bottom: 1px;
+}
+.header_smenu_list_wrap.fixed {
+  position: fixed;
   top: 0;
-  min-height: 5.53125rem;
+  left: 50%;
+  width: 720px;
+  border-bottom: 1px solid #cacaca;
+  transform: translateX(-50%);
+}
+
+.header_smenu_list_wrap::-webkit-scrollbar {
+  width: 0;
+  display: none;
 }
 
 .header_smenu_list {
-  display: flex;
+  display: table;
   align-items: center;
   padding: 0 1.15625rem;
   background: #fff;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 .header_smenu_list > li {
-  flex: 1;
+  padding: 0 0.625rem;
+  display: table-cell;
 }
 .header_smenu_list > li.active .header_smenu .smenu_text {
   color: #000;
@@ -1071,41 +1118,14 @@ body ::-webkit-scrollbar-track {
   bottom: -1px;
   left: -0.625rem;
 }
-.header_smenu_list.fixed {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  width: 720px;
-  border-bottom: 1px solid #cacaca;
-  transform: translateX(-50%);
+.header_smenu_list > li:last-of-type {
+  padding-right: 0;
 }
 
 .header_smenu {
   display: inline-block;
   position: relative;
-  padding: 0.75rem 0 1.25rem;
-}
-.header_smenu:before {
-  display: block;
-  content: "";
-  width: 1.5625rem;
-  height: 1.5625rem;
-  margin: 0 auto;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: 0 0;
-}
-.header_smenu.ico_s01:before {
-  background-image: url("../images/icon_sc01.png");
-}
-.header_smenu.ico_s02:before {
-  background-image: url("../images/icon_sc02.png");
-}
-.header_smenu.ico_s03:before {
-  background-image: url("../images/icon_sc03.png");
-}
-.header_smenu.ico_s04:before {
-  background-image: url("../images/icon_sc04.png");
+  padding: 0.9375rem 0 0.9375rem;
 }
 
 .smenu_text {
@@ -1114,12 +1134,11 @@ body ::-webkit-scrollbar-track {
   color: #4e4e4e;
   line-height: 1;
   font-weight: 500;
-  margin-top: 0.53125rem;
-  font-weight: 500;
+  white-space: nowrap;
 }
 
 .header_fxwrap {
-  height: 4.375rem;
+  height: 3.125rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1186,7 +1205,7 @@ body ::-webkit-scrollbar-track {
 .page_wrap:after {
     display: none;
   }
-  .header_smenu_list.fixed {
+  .header_smenu_list_wrap.fixed {
     left: 0;
     width: 100%;
     transform: translateX(0);
@@ -2521,7 +2540,7 @@ body ::-webkit-scrollbar-track {
 
 .form_title_group {
   text-align: center;
-  padding: 3.21875rem 1.125rem 1.75rem;
+  padding: 2.5rem 1.125rem 1.25rem;
 }
 
 .form_title_main {
@@ -2538,7 +2557,7 @@ body ::-webkit-scrollbar-track {
 }
 
 .midform_vlist > * {
-  margin-top: 1.0625rem;
+  margin-top: 0.625rem;
 }
 .midform_vlist > *:first-of-type {
   margin-top: 0;
@@ -2547,13 +2566,13 @@ body ::-webkit-scrollbar-track {
 input.form_input {
   border: 0;
   border-bottom: 1px solid #ebebeb;
-  height: 3.46875rem;
+  height: 2.8125rem;
   line-height: 1;
   width: 100%;
   font-size: 1rem;
 }
 input.form_input.calendar_call {
-  padding-right: 3.125rem !important;
+  padding-right: 2.8125rem !important;
   background: url("../images/icon_calendar3.png") no-repeat 100% 50%/2.9375rem auto;
 }
 input.form_input:focus {
@@ -2647,7 +2666,7 @@ input.form_input:focus {
 }
 
 .midform_vitem.type2 {
-  margin-top: 1.46875rem;
+  margin-top: 0.625rem;
 }
 
 .form_both_row {
@@ -2665,10 +2684,10 @@ input.form_input:focus {
 }
 
 .btn_botsubmit_w {
-  margin-top: 1.5625rem;
+  margin-top: 1.25rem;
 }
 .btn_botsubmit_w.type2 {
-  margin-top: 1.125rem;
+  margin-top: 0.9375rem;
 }
 
 .btn_botsubmit {
@@ -2682,7 +2701,7 @@ input.form_input:focus {
   font-size: 1rem;
   color: #ffffff;
   text-align: center;
-  padding: 0.9375rem 0.9375rem 1rem;
+  padding: 0.71875rem 0.75rem 0.78125rem;
 }
 .btn_botsubmit:last-of-type {
   margin-bottom: 0;
@@ -2706,7 +2725,7 @@ input.form_input:focus {
 }
 
 .mid_icon_wrap {
-  padding: 1.875rem 1.875rem 1.5625rem;
+  padding: 1.25rem 1.875rem 1.25rem;
 }
 
 .mid_icon {
@@ -2740,21 +2759,21 @@ input.form_input:focus {
 }
 
 .ms_fieldset_wrap .btn_botsubmit_w {
-  margin-top: 1.03125rem;
+  margin-top: 0.625rem;
 }
 
 .ms_fitem {
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.4375rem;
   background: #fff;
   display: flex;
   align-items: center;
   border-radius: 0.3125rem;
-  height: 2.9375rem;
+  height: 2.625rem;
   position: relative;
   overflow: hidden;
 }
 .ms_fitem input.form_input {
-  height: 2.9375rem;
+  height: 2.625rem;
   border-bottom: 0;
   background-color: transparent;
   font-size: 0.9375rem;
@@ -2815,10 +2834,15 @@ input.form_input:focus {
   word-break: keep-all;
 }
 
+.window .ms_fxdata {
+  position: relative;
+  top: -1px;
+}
+
 .btn_msico {
-  flex: 0 0 3.125rem;
-  width: 3.125rem;
-  height: 3.125rem;
+  flex: 0 0 2.625rem;
+  width: 2.625rem;
+  height: 2.625rem;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
@@ -2829,7 +2853,7 @@ input.form_input:focus {
 }
 
 .data_result_wrap {
-  margin-top: 1.5625rem;
+  margin-top: 1.25rem;
 }
 
 .data_more_row {
@@ -2840,9 +2864,24 @@ input.form_input:focus {
 
 .btn_data_more {
   display: block;
-  width: 1.28125rem;
-  height: 1.28125rem;
-  background: url("../images/icon_plus.png") no-repeat 0 0/100% auto;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  position: relative;
+}
+.btn_data_more:before, .btn_data_more:after {
+  display: block;
+  content: "";
+  width: 0.125rem;
+  height: 100%;
+  border-radius: 0.3125rem;
+  background: #4f46c6;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -0.0625rem;
+}
+.btn_data_more:after {
+  transform: rotate(90deg);
 }
 
 .data_main_row {
@@ -2850,7 +2889,7 @@ input.form_input:focus {
   border-top: 1px solid #e2e2e2;
   border-bottom: 1px solid #e2e2e2;
   margin: 0 -1.15625rem;
-  padding: 1.15625rem;
+  padding: 0.75rem 1.15625rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2882,14 +2921,16 @@ input.form_input:focus {
 }
 
 .data_linkage_row {
-  margin-top: 1.25rem;
+  margin: 0.9375rem 0 0.625rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .data_sort_list {
   display: flex;
   align-items: center;
+  line-height: 0;
 }
 .data_sort_list > li {
   padding-right: 1.625rem;
@@ -2925,7 +2966,7 @@ input.form_input:focus {
 }
 
 .data_linkage_item_row > * {
-  margin-bottom: 0.9375rem;
+  margin-bottom: 0.5rem;
 }
 .data_linkage_item_row > *:last-of-type {
   margin-bottom: 0;
@@ -2935,15 +2976,15 @@ input.form_input:focus {
   display: block;
   border-radius: 0.5rem;
   border: 1px solid #e2e2e2;
-  padding: 1.15625rem 1.25rem;
+  padding: 0.625rem 0.9375rem 0.75rem;
   box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.0003);
 }
 
 .data_linkage_sub {
   display: block;
   font-size: 0.875rem;
-  color: #6d6c6c;
-  margin-bottom: 0.4375rem;
+  color: #000000;
+  margin-bottom: 0.125rem;
 }
 
 .data_linkage_main {
@@ -2965,7 +3006,7 @@ input.form_input:focus {
   color: #000000;
   line-height: 1;
   font-weight: 500;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
 }
 .data_linkage_author:before {
   display: block;
@@ -2985,7 +3026,7 @@ input.form_input:focus {
 }
 
 .data_price_label {
-  color: #6d6c6c;
+  color: #000;
   display: flex;
   line-height: 0;
   align-items: center;
@@ -3008,9 +3049,9 @@ input.form_input:focus {
 
 .price_total_sub {
   display: block;
-  color: #6d6c6c;
+  color: #000;
   font-size: 0.8125rem;
-  margin-bottom: 0.4375rem;
+  margin-bottom: 0.1875rem;
 }
 
 .price_total_main {
@@ -3160,13 +3201,13 @@ select.form_bsel {
   color: #2b2b2b;
   border: 0;
   font-size: 0.9375rem;
-  height: 2.9375rem;
+  height: 2.625rem;
   padding: 0 2.0625rem 0 1rem;
   box-sizing: border-box;
   font-family: "Noto Sans KR";
   font-weight: 500;
-  background: transparent url("../images/icon_select2.png") no-repeat 100% 50%/2.125rem auto;
-  line-height: 2.8125rem;
+  background: transparent url("../images/icon_select2.png") no-repeat 100% 50%/1.6875rem auto;
+  line-height: 2.5rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -3200,7 +3241,7 @@ select.form_bsel.ready {
 }
 .data_fv_table th, .data_fv_table td {
   vertical-align: top;
-  padding-bottom: 0.625rem;
+  padding-bottom: 0.3125rem;
   text-align: left;
 }
 .data_fv_table th {
@@ -3335,7 +3376,7 @@ select.form_bsel.ready {
 .popup_titlelow {
   text-align: center;
   border-bottom: 1px solid #e7e7e7;
-  flex: 0 0 4.375rem;
+  flex: 0 0 3.125rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3367,7 +3408,7 @@ select.form_bsel.ready {
 }
 
 .pcont_inwrap {
-  padding: 1.875rem 1.15625rem 3.75rem;
+  padding: 0.9375rem 1.15625rem 3rem;
 }
 
 .popup_btnlow {
@@ -3388,10 +3429,10 @@ select.form_bsel.ready {
 
 .btn_popup_close {
   display: block;
-  width: 3.21875rem;
-  height: 3.21875rem;
+  width: 3.125rem;
+  height: 3.125rem;
   position: absolute;
-  top: 0.5625rem;
+  top: 0;
   right: 0;
 }
 
@@ -3441,7 +3482,7 @@ input.input_calendar {
   font-size: 0.9375rem;
   color: #2b2b2b;
   height: 1.25rem;
-  padding: 0.9375rem 1.625rem 0.9375rem 0;
+  padding: 0.625rem 1.625rem 0.625rem 0;
   line-height: 1;
   background: transparent url("../images/icon_calendar2.png") no-repeat 100% 50%/1.25rem auto;
   line-height: 1;
@@ -3520,13 +3561,13 @@ input.inline_calendar_form::-webkit-date-and-time-value {
 }
 
 .control_box_vitem_group {
-  margin-top: 1rem;
+  margin-top: 0.625rem;
 }
 
 .control_box_vitem {
   display: flex;
   margin: 0 -0.140625rem 0.234375rem;
-  height: 2.875rem;
+  height: 2.5rem;
 }
 .control_box_vitem:last-of-type {
   margin-bottom: 0;
@@ -3540,9 +3581,19 @@ input.inline_calendar_form::-webkit-date-and-time-value {
   border: 1px solid #b0b0b0;
   margin: 0 0.140625rem;
   border-radius: 0.3125rem;
+  box-sizing: border-box;
+  position: relative;
 }
-.btn_control_box.active {
+.btn_control_box.active:after {
+  display: block;
+  content: "";
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
   border: 2px solid #4f46c6;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  border-radius: 0.3125rem;
 }
 .btn_control_box.active .btn_control_box_text {
   color: #4f46c6;
@@ -3618,7 +3669,7 @@ input.inline_calendar_form::-webkit-date-and-time-value {
   }
 }
 .mid_section.main_ms {
-  padding: 0 0 3rem;
+  padding: 0 0 1.875rem;
 }
 .mid_section.main_ms > .btn_botsubmit_w {
   margin: 1.5625rem 1.15625rem 0;
@@ -3626,7 +3677,7 @@ input.inline_calendar_form::-webkit-date-and-time-value {
 
 .ico_main_counter_zone {
   border-bottom: 0.5rem solid #edeff2;
-  padding: 1.4375rem 1.15625rem 1.875rem;
+  padding: 0.9375rem 1.15625rem 0.9375rem;
 }
 
 .ico_main_counter_list {
@@ -3648,7 +3699,7 @@ input.inline_calendar_form::-webkit-date-and-time-value {
   width: 1.5625rem;
   height: 1.5625rem;
   background: url("../images/icon_mc.png") no-repeat 0 0/100% auto;
-  margin: 0 auto 0.5rem;
+  margin: 0 auto 0.3125rem;
 }
 .ico_main_counter.ico_01:before {
   background-position: 0 0;
@@ -3671,11 +3722,11 @@ input.inline_calendar_form::-webkit-date-and-time-value {
 .ico_mcounter_para02 {
   font-size: 1.0625rem;
   line-height: 1;
-  margin-top: 1rem;
+  margin-top: 0.625rem;
 }
 
 .ms_menu_item {
-  padding: 1.5625rem 1.15625rem 0.5rem;
+  padding: 1.25rem 1.15625rem 0.5rem;
   border-bottom: 1px solid #e0e0e0;
 }
 .ms_menu_label {
@@ -3684,13 +3735,13 @@ input.inline_calendar_form::-webkit-date-and-time-value {
   line-height: 1;
   font-weight: 700;
   letter-spacing: -1px;
-  margin-bottom: 0.78125rem;
+  margin-bottom: 0.4375rem;
 }
 
 .ms_menu {
   display: block;
   position: relative;
-  padding: 1rem 1.5625rem 1rem 0;
+  padding: 0.5rem 1.5625rem 0.5rem 0;
 }
 .ms_menu:after {
   display: block;

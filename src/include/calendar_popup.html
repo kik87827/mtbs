@@ -57,7 +57,25 @@
 			});
 		},false);
 		calendarCall();
+		btnActiveAction(); /* 230123 추가 */
 	});
+
+	/* 230123 추가 */
+	function btnActiveAction(){
+		const btn_control_box = document.querySelectorAll(".btn_control_box");
+		let active_control_box = document.querySelector(".btn_control_box.active");
+		btn_control_box.forEach((element,index)=>{
+			element.addEventListener("click",(e)=>{
+				e.preventDefault();
+				if(active_control_box){
+					active_control_box.classList.remove("active");
+				}
+				e.currentTarget.classList.add("active");
+
+				active_control_box = e.currentTarget;
+			});
+		})
+	}
 
 	function calendarCall(){
 		$(function(){
