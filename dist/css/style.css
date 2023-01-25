@@ -2569,7 +2569,7 @@ input.form_input {
   height: 2.8125rem;
   line-height: 1;
   width: 100%;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 input.form_input.calendar_call {
   padding-right: 2.8125rem !important;
@@ -2587,21 +2587,6 @@ input.form_input:focus {
 }
 
 @media (max-width: 374px) {
-  input.form_input::-webkit-input-placeholder {
-    font-size: 0.875rem !important;
-  }
-  input.form_input::-moz-input-placeholder {
-    font-size: 0.875rem !important;
-  }
-  input.form_input:-ms-input-placeholder {
-    font-size: 0.875rem !important;
-  }
-  input.form_input::-ms-input-placeholder {
-    font-size: 0.875rem !important;
-  }
-  input.form_input::input-placeholder {
-    font-size: 0.875rem !important;
-  }
   .mb_placeholder_para {
     display: block;
   }
@@ -2853,7 +2838,7 @@ input.form_input:focus {
 }
 
 .data_result_wrap {
-  margin-top: 1.25rem;
+  margin-top: 0.9375rem;
 }
 
 .data_more_row {
@@ -2966,7 +2951,7 @@ input.form_input:focus {
 }
 
 .data_linkage_item_row > * {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3125rem;
 }
 .data_linkage_item_row > *:last-of-type {
   margin-bottom: 0;

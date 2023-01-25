@@ -19,7 +19,7 @@
 } 
 .midform_vitem{} 
 .form_input_wrap{} 
-input.form_input{border:0;border-bottom:1px solid #ebebeb;height:rem(45);line-height:1;width:100%;font-size:rem(16); 
+input.form_input{border:0;border-bottom:1px solid #ebebeb;height:rem(45);line-height:1;width:100%;font-size:rem(24); 
     &.calendar_call{ 
         padding-right:rem(45) !important;background:url("../images/icon_calendar3.png") no-repeat 100% 50%/rem(47) auto; 
     } 
@@ -28,11 +28,11 @@ input.form_input{border:0;border-bottom:1px solid #ebebeb;height:rem(45);line-he
 .mb_placeholder_para{display:none;font-size:rem(14);margin-top:rem(15);color:#4e4e4e} 
 @media (max-width:374px){ 
     input.form_input{ 
-        &::-webkit-input-placeholder{font-size:rem(14) !important;} 
-        &::-moz-input-placeholder{font-size:rem(14) !important;} 
-        &:-ms-input-placeholder{font-size:rem(14) !important;} 
-        &::-ms-input-placeholder{font-size:rem(14) !important;} 
-        &::input-placeholder{font-size:rem(14) !important;} 
+        // &::-webkit-input-placeholder{font-size:rem(24) !important;} 
+        // &::-moz-input-placeholder{font-size:rem(14) !important;} 
+        // &:-ms-input-placeholder{font-size:rem(14) !important;} 
+        // &::-ms-input-placeholder{font-size:rem(14) !important;} 
+        // &::input-placeholder{font-size:rem(14) !important;} 
     } 
     .mb_placeholder_para{display:block;} 
 } 
@@ -105,7 +105,7 @@ input.form_input{border:0;border-bottom:1px solid #ebebeb;height:rem(45);line-he
 .btn_msico{flex:0 0 rem(42); width:rem(42);height:rem(42);background-position:50% 50%;background-repeat:no-repeat;} 
 .btn_msico.ico_calendar{background-image:url("../images/icon_calendar.png");background-size:rem(20) auto;} 
  
-.data_result_wrap{margin-top:rem(20);} 
+.data_result_wrap{margin-top:rem(15);} 
 .data_more_row{display:flex;justify-content: flex-end;margin-bottom:rem(10);} 
 .btn_data_more{display:block;width:rem(15);height:rem(15);position:relative;
     &:before,
@@ -144,7 +144,7 @@ input.form_input{border:0;border-bottom:1px solid #ebebeb;height:rem(45);line-he
  
 .data_linkage_item_row{ 
     > *{ 
-        margin-bottom:rem(8); 
+        margin-bottom:rem(5); 
         &:last-of-type{margin-bottom:0;} 
     } 
     .nodata_wrap{} 
