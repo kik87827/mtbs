@@ -1070,6 +1070,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   text-align: center;
   top: 1px;
   min-height: 3.4375rem;
+  background: #fff;
 }
 
 .header_smenu_list_wrap {
@@ -1077,14 +1078,14 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   overflow-x: overlay;
   position: relative;
   padding-bottom: 1px;
+  background: #fff;
 }
 .header_smenu_list_wrap.fixed {
   position: fixed;
   top: 0;
-  left: 50%;
-  width: 720px;
+  left: 0;
+  width: 100%;
   border-bottom: 1px solid #cacaca;
-  transform: translateX(-50%);
 }
 
 .header_smenu_list_wrap::-webkit-scrollbar {
