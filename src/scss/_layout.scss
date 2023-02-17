@@ -6,11 +6,13 @@ html:not(.touchmode) ::-webkit-scrollbar-track {background-color: #fff;border-ra
 /* */ 
 html,
 .front_body{}
-.page_wrap{position:relative;max-width:rem(720);margin:0 auto;min-width:rem(17.5);}
-.page_wrap:before,
-.page_wrap:after{display:block;content:'';width:calc(50% - rem(360));height:100%;position:fixed;top:0;background:#fff;z-index:70}
-.page_wrap:before{left:0;}
-.page_wrap:after{right:0;}
+.page_wrap{position:relative;max-width:rem(720);margin:0 auto;min-width:rem(17.5);
+    &:before,
+    &:after{display:block;content:'';width:calc(50% - rem(360));height:100%;position:fixed;top:0;background:#fff;z-index:70}
+    &:before{left:0;}
+    &:after{right:0;}
+    &.page_message_wrap{}
+}
 
 .header_zone{border-bottom:1px solid #cacaca;position:relative;z-index:20;
     &.sticky{position:sticky;z-index:20;top:0;left:0;width:100%;background:#fff;}
@@ -25,6 +27,9 @@ html,
 .mid_section{padding:rem(15) rem(18.5) rem(48);
     &.type2{padding-top:rem(24);}
     &.type3{padding-right:0;padding-left:0;}
+    &.fulltype{min-height:calc(100vh - rem(51));padding:0 0 rem(48);box-sizing: border-box;}
+    &.bgtype{background:#f5f5f5;}
+    &.type4{padding:0 0 rem(48);}
 }
 .footer_zone{background:#fdfdfd;border-top:1px solid #dedede;}
 .footer_inwrap{padding:rem(18) rem(18.5);font-size:rem(15);}
@@ -58,13 +63,14 @@ html,
 }
 .header_smenu_list_wrap::-webkit-scrollbar {width:0;display:none;}
 .header_smenu_list{display:table;align-items: center;padding:0 rem(18.5);background:#fff;box-sizing:border-box;margin:0 auto;
-    > li{padding:0 rem(10);display:table-cell;
+    > li{padding:0 rem(30);display:table-cell;
         &.active{
             .header_smenu{
                 .smenu_text{color:#000;font-weight:700;}
                 &:after{display:block;content:'';width:calc(100% + rem(20));height:rem(2);background:#4f46c6;position:absolute;bottom:-1px;left:rem(-10);}
             }
         }
+        &:first-of-type{padding-left:0;}
         &:last-of-type{padding-right:0;}
     }
     
@@ -93,7 +99,6 @@ li.active .header_smenu:before{}
 }
 .btn_headutil_wrap{padding-right:rem(18.5)}
 
-
 @media (max-width:720px){
     .page_wrap:before,
     .page_wrap:after{display:none;}
@@ -103,7 +108,15 @@ li.active .header_smenu:before{}
     .header_smenu_list{
         
         > li{
-            
+            padding:0 rem(20);
+        }
+    }
+}
+
+@media (max-width:374px){
+    .header_smenu_list{
+        > li{
+            padding:0 rem(10);
         }
     }
 }
